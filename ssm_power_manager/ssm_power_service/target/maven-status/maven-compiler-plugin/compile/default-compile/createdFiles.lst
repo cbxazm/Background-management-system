@@ -1,0 +1,8 @@
+com\cbx\service\IProductService.class
+com\cbx\service\IUserService.class
+com\cbx\service\Impl\UserServiceImpl.class
+com\cbx\service\IPermissionService.class
+com\cbx\service\IOrderService.class
+com\cbx\service\Impl\IPermissionServiceImpl.class
+com\cbx\service\Impl\IOrderServiceImpl.class
+com\cbx\service\Impl\IProductServiceImpl.class

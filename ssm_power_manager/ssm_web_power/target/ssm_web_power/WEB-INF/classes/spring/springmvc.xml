@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/mvc
+ http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--扫描包-->
+    <context:component-scan base-package="com.cbx.controller"></context:component-scan>
+    <!--开启自动加载处理器映射器和处理器适配器-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!--开启视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <!--过滤静态资源-->
+    <mvc:resources mapping="/css/**" location="/css/"></mvc:resources>
+    <!--<mvc:resources mapping="/js/**" location="/WEB-INF/js/"></mvc:resources>-->
+    <mvc:resources mapping="/img/**" location="/img/"></mvc:resources>
+    <mvc:resources location="/js/" mapping="/js/**" />
+    <mvc:resources location="/plugins/" mapping="/plugins/**" />
+<!--
+      支持AOP的注解支持，AOP底层使用代理技术
+      JDK动态代理，要求必须有接口
+      cglib代理，生成子类对象，proxy-target-class='true'默认为cglib的方式
+-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>

@@ -1,0 +1,7 @@
+com\cbx\domain\Role.class
+com\cbx\domain\Member.class
+com\cbx\domain\Permission.class
+com\cbx\domain\Orders.class
+com\cbx\domain\Product.class
+com\cbx\domain\Traveller.class
+com\cbx\domain\UserInfo.class
