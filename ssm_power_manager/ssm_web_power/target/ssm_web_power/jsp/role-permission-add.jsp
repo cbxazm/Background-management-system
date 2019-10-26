@@ -61,11 +61,6 @@
 	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
-	<style type="text/css">
-		html,body{ overflow-y:scroll;}
-		html,body{ overflow:scroll; min-height:101%;}
-		html{ overflow:-moz-scrollbars-vertical;}
-	</style>
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -85,25 +80,25 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 			<h1>
-				用户管理 <small>添加角色表单</small>
+				角色管理 <small>添加权限表单</small>
 			</h1>
 			<ol class="breadcrumb">
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/user/findAll">用户管理</a></li>
-				<li class="active">添加角色表单</li>
+					href="${pageContext.request.contextPath}/role/findAll">角色管理</a></li>
+				<li class="active">添加权限表单</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
 
 			<form
-				action="${pageContext.request.contextPath}/user/addRoleToUser"
+				action="${pageContext.request.contextPath}/role/addPermissionToRole"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> 
 				
-				<input  type="hidden" name="userId" value="${userInfo.id}">
+				<input type="hidden" name="roleId" value="${role.id}">
 				
 					<table id="dataList"
 							class="table table-bordered table-striped table-hover dataTable">
@@ -113,19 +108,21 @@
 									<input id="selall" 
 										type="checkbox" class="icheckbox_square-blue"></th>
 									<th class="sorting_asc">ID</th>
-									<th class="sorting">角色名称</th>
-									<th class="sorting">角色描述</th>									
+									<th class="sorting">权限名称</th>
+									<th class="sorting">权限URL</th>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${roleList}" var="role">
+								<c:forEach items="${permissionList}" var="permission">
 									<tr>
 										<td>
-										<input name="ids" type="checkbox" value="${role.id}">
+										
+										<input name="ids" type="checkbox" value="${permission.id}">
+										
 										</td>
-										<td>${role.id}</td>
-										<td>${role.roleName }</td>
-										<td>${role.roleDesc}</td>
+										<td>${permission.id}</td>
+										<td>${permission.permissionName }</td>
+										<td>${permission.url}</td>
 										
 									</tr>
 								</c:forEach>

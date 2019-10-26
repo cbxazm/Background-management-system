@@ -61,6 +61,11 @@
 	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+	<style type="text/css">
+		html,body{ overflow-y:scroll;}
+		html,body{ overflow:scroll; min-height:101%;}
+		html{ overflow:-moz-scrollbars-vertical;}
+	</style>
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -86,7 +91,7 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
+					href="${pageContext.request.contextPath}/user/findAll">用户管理</a></li>
 				<li class="active">添加角色表单</li>
 			</ol>
 			</section>
@@ -98,7 +103,7 @@
 				<!-- 正文区域 -->
 				<section class="content"> 
 				
-				<input type="hidden" name="userId" value="${user.id}">
+				<input  type="hidden" name="userId" value="${userInfo.id}">
 				
 					<table id="dataList"
 							class="table table-bordered table-striped table-hover dataTable">
@@ -116,9 +121,7 @@
 								<c:forEach items="${roleList}" var="role">
 									<tr>
 										<td>
-										
 										<input name="ids" type="checkbox" value="${role.id}">
-										
 										</td>
 										<td>${role.id}</td>
 										<td>${role.roleName }</td>

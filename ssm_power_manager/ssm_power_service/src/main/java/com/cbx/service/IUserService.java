@@ -16,4 +16,6 @@ public interface IUserService  extends UserDetailsService{
     UserInfo findById(Integer id);
 
     List<Role> findOtherRoles(Integer userId);
+   //给用户添加角色信息
+    void addRoleToUser(Integer userId, Integer[] roleIds);
 }

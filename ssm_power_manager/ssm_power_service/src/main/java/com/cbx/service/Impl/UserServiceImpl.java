@@ -64,4 +64,12 @@ public class UserServiceImpl implements IUserService {
     public List<Role> findOtherRoles(Integer userId) {
         return userDao.findOtherRoles(userId);
     }
+
+    @Override
+    public void addRoleToUser(Integer userId, Integer[] roleIds) {
+        for (Integer roleId:roleIds){
+            userDao.addRoleToUser(userId,roleId);
+
+        }
+    }
 }

@@ -56,4 +56,10 @@ public class UserController {
                modelAndView.setViewName("user-role-add");
                return modelAndView;
     }
+    //真正的开始添加角色
+    @RequestMapping("/addRoleToUser")
+    public String addRoleToUser(@RequestParam(name = "userId",required = true) Integer userId,@RequestParam(name = "ids",required = true) Integer[] roleIds){
+            iUserService.addRoleToUser(userId,roleIds);
+        return "redirect:findAll";
+    }
 }

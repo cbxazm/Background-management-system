@@ -46,4 +46,12 @@ public interface IUserDao {
      */
     @Select("select * from role where id not in(select roleId from user_role where userId=#{userId})")
     List<Role> findOtherRoles(Integer userId);
+
+    /**
+     * 真正给用户添加角色信息
+     * @param userId
+     * @param roleId
+     */
+    @Insert("insert into user_role (userId,roleId) values(#{userId},#{roleId})")
+    void addRoleToUser(@Param("userId") Integer userId,@Param("roleId") Integer roleId);
 }
