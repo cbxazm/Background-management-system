@@ -12,4 +12,5 @@ public class PermissionController {
         ModelAndView modelAndView=new ModelAndView();
         return modelAndView;
     }
+  
 }

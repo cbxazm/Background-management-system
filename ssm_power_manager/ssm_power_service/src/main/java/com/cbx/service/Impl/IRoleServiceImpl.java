@@ -16,4 +16,9 @@ public class IRoleServiceImpl implements IRoleService {
     public List<Role> findAll() {
         return iRoleDao.findAll();
     }
+
+    @Override
+    public void save(Role role) {
+          iRoleDao.save(role);
+    }
 }

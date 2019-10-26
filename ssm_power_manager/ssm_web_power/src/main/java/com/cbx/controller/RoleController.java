@@ -22,4 +22,10 @@ public class RoleController {
         modelAndView.setViewName("role-list");
         return modelAndView;
  }
+// 添加角色
+    @RequestMapping("/save")
+    public String save(Role role){
+        iRoleService.save(role);
+        return "redirect:findAll";
+    }
 }

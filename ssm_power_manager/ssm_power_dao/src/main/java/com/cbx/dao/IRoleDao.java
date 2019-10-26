@@ -1,10 +1,7 @@
 package com.cbx.dao;
 
 import com.cbx.domain.Role;
-import org.apache.ibatis.annotations.Many;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -24,4 +21,6 @@ public interface IRoleDao {
     public List<Role> findRoleByUserId(Integer userId);
 @Select("select * from role")
     List<Role> findAll();
+@Insert("insert into role (roleName,roleDesc) values(#{roleName},#{roleDesc})")
+    void save(Role role);
 }
