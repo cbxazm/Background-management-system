@@ -1,5 +1,6 @@
 package com.cbx.service;
 
+import com.cbx.domain.Role;
 import com.cbx.domain.UserInfo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,4 +14,6 @@ public interface IUserService  extends UserDetailsService{
     void save(UserInfo userInfo);
 
     UserInfo findById(Integer id);
+
+    List<Role> findOtherRoles(Integer userId);
 }

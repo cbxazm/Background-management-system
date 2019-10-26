@@ -1,5 +1,6 @@
 package com.cbx.dao;
 
+import com.cbx.domain.Role;
 import com.cbx.domain.UserInfo;
 import org.apache.ibatis.annotations.*;
 
@@ -37,4 +38,12 @@ public interface IUserDao {
            @Result(property = "roles" ,column="id",javaType = java.util.List.class,many = @Many(select = "com.cbx.dao.IRoleDao.findRoleByUserId"))
    })
     UserInfo findById(Integer id);
+
+    /**
+     * 用于查询该user可以添加的角色
+     * @param userId
+     * @return
+     */
+    @Select("select * from role where id not in(select roleId from user_role where userId=#{userId})")
+    List<Role> findOtherRoles(Integer userId);
 }

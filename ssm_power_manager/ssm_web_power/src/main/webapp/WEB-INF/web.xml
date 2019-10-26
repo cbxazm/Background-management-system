@@ -29,6 +29,7 @@
   </filter-mapping>
   <!--配置springSecurity-->
   <filter>
+    <!--这个名字是不能改变的-->
     <filter-name>springSecurityFilterChain</filter-name>
     <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
   </filter>

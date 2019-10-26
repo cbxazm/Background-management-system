@@ -1,5 +1,6 @@
 package com.cbx.controller;
 
+import com.cbx.domain.Role;
 import com.cbx.domain.UserInfo;
 import com.cbx.service.IUserService;
 import org.apache.ibatis.annotations.Insert;
@@ -42,5 +43,17 @@ public class UserController {
         modelAndView.setViewName("user-show");
         return modelAndView;
     }
-
+    //再给用户添加角色之前查询用户以及用可以添加的角色
+    @RequestMapping("/findUserByIdAndAllRole")
+    public ModelAndView findUserByIdAndAllRole(@RequestParam(name = "id",required = true) Integer userId){
+        ModelAndView modelAndView=new ModelAndView();
+           //根据用户的Id查询用户
+        UserInfo userInfo = iUserService.findById(userId);
+        //根据用户的Id查询可以添加的角色
+        List<Role> otherRoles=iUserService.findOtherRoles(userId);
+        modelAndView.addObject("userInfo",userInfo);
+        modelAndView.addObject("roleList",otherRoles);
+               modelAndView.setViewName("user-role-add");
+               return modelAndView;
+    }
 }
