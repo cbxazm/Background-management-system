@@ -27,6 +27,12 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+                           <!--使用jsr250-api-->
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>jsr250-api</artifactId>
+                <version>1.0</version>
+            </dependency>
             <!--使用springSecurity-->
             <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
             <dependency>

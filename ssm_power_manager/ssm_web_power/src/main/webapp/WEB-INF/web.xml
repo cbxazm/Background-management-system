@@ -51,5 +51,9 @@
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
+  <!--配置出现什么样的错误信息，跳转到什么友好的页面-->
+   <!--<error-page>-->
+     <!--<error-code>403</error-code>-->
+     <!--<location>/403.jsp</location>-->
+   <!--</error-page>-->
 </web-app>
