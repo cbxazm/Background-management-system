@@ -27,7 +27,14 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-                           <!--使用jsr250-api-->
+            <!--在页面端使用权限控制需要的依赖-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-taglibs</artifactId>
+                <version>5.2.0.RELEASE</version>
+            </dependency>
+            <!--使用jsr250-api-->
             <dependency>
                 <groupId>javax.annotation</groupId>
                 <artifactId>jsr250-api</artifactId>

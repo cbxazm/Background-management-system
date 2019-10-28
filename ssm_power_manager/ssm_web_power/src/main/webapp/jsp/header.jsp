@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false" %>
-
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <!-- 页面头部 -->
 <header class="main-header">
 	<!-- Logo -->
@@ -22,7 +22,8 @@
 					class="dropdown-toggle" data-toggle="dropdown"> <img
 						src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 						class="user-image" alt="User Image"> <span class="hidden-xs">
-							xxx
+					<%--显示出当前使用的人的用户名--%>
+                      <security:authentication property="principal.username"></security:authentication>
 					</span>
 
 				</a>

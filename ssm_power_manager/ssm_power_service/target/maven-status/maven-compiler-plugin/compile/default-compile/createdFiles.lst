@@ -6,3 +6,5 @@ com\cbx\service\IOrderService.class
 com\cbx\service\Impl\IPermissionServiceImpl.class
 com\cbx\service\Impl\IOrderServiceImpl.class
 com\cbx\service\Impl\IProductServiceImpl.class
+com\cbx\service\IRoleService.class
+com\cbx\service\Impl\IRoleServiceImpl.class

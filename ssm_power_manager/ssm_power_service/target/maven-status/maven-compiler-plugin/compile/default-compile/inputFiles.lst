@@ -1,8 +1,10 @@
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\Impl\IProductServiceImpl.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\Impl\IOrderServiceImpl.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\IPermissionService.java
+F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\Impl\IRoleServiceImpl.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\IOrderService.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\IProductService.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\Impl\UserServiceImpl.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\IUserService.java
+F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\IRoleService.java
 F:\ssm_power\ssm_power_manager\ssm_power_service\src\main\java\com\cbx\service\Impl\IPermissionServiceImpl.java

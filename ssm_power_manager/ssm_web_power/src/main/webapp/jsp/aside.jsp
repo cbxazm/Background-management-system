@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false" %>
-
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->
 	<section class="sidebar">
@@ -11,7 +11,7 @@
 					class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p>tom</p>
+				<p><security:authentication property="principal.username"></security:authentication></p>
 				<a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
 			</div>
 		</div>
@@ -22,20 +22,21 @@
 			<li id="admin-index"><a
 				href="${pageContext.request.contextPath}/jsp/main.jsp"><i
 					class="fa fa-dashboard"></i> <span>首页</span></a></li>
-
 			<li class="treeview"><a href="#"> <i class="fa fa-cogs"></i>
 					<span>系统管理</span> <span class="pull-right-container"> <i
 						class="fa fa-angle-left pull-right"></i>
 				</span>
-
-
 			</a>
 				<ul class="treeview-menu">
-
-					<li id="system-setting"><a
+                      <%--让只有ADMIN属性的人才能看到该标签--%>
+					<li id="system-setting">
+						<security:authorize access="hasRole('ADMIN')">
+						<a
 						href="${pageContext.request.contextPath}/user/findAll"> <i
 							class="fa fa-circle-o"></i> 用户管理
-					</a></li>
+					</a>
+						</security:authorize>
+					</li>
 					<li id="system-setting"><a
 						href="${pageContext.request.contextPath}/role/findAll"> <i
 							class="fa fa-circle-o"></i> 角色管理

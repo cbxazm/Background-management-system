@@ -1,4 +1,5 @@
-com\cbx\controller\ProductController.class
-com\cbx\controller\UserController.class
+com\cbx\controller\RoleController.class
 com\cbx\controller\OrdersController.class
 com\cbx\controller\PermissionController.class
+com\cbx\controller\ProductController.class
+com\cbx\controller\UserController.class
