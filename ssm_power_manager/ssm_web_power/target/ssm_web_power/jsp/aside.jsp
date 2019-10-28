@@ -28,7 +28,7 @@
 				</span>
 			</a>
 				<ul class="treeview-menu">
-
+                      <%--让只有ADMIN属性的人才能看到该标签--%>
 					<li id="system-setting">
 						<security:authorize access="hasRole('ADMIN')">
 						<a

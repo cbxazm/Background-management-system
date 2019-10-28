@@ -3,6 +3,7 @@ package com.cbx.controller;
 import com.cbx.domain.Orders;
 import com.cbx.service.IOrderService;
 import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class OrdersController {
     @Autowired
     private IOrderService iOrderService;
    @RequestMapping("/findAll")
-    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") int page,@RequestParam(name = "size", required = true, defaultValue = "4") int size) throws Exception {
+    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") Integer page, @RequestParam(name = "size", required = true, defaultValue = "4") Integer size) throws Exception {
      ModelAndView modelAndView=new ModelAndView();
        List<Orders> orders = iOrderService.findAll(page, size);
 //       System.out.println(orders.size());
