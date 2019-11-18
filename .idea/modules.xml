@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ssm_power.iml" filepath="$PROJECT_DIR$/ssm_power.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_common/ssm_power_common.iml" filepath="$PROJECT_DIR$/ssm_power_common/ssm_power_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_manager/ssm_power_dao/ssm_power_dao.iml" filepath="$PROJECT_DIR$/ssm_power_manager/ssm_power_dao/ssm_power_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_manager/ssm_power_domain/ssm_power_domain.iml" filepath="$PROJECT_DIR$/ssm_power_manager/ssm_power_domain/ssm_power_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_manager/ssm_power_manager.iml" filepath="$PROJECT_DIR$/ssm_power_manager/ssm_power_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_parent/ssm_power_parent.iml" filepath="$PROJECT_DIR$/ssm_power_parent/ssm_power_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_manager/ssm_power_service/ssm_power_service.iml" filepath="$PROJECT_DIR$/ssm_power_manager/ssm_power_service/ssm_power_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_power_manager/ssm_web_power/ssm_web_power.iml" filepath="$PROJECT_DIR$/ssm_power_manager/ssm_web_power/ssm_web_power.iml" />
+    </modules>
+  </component>
+</project>

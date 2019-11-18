@@ -20,6 +20,5 @@
     <!--<tx:annotation-driven transaction-manager="dataSourceTransactionManager"></tx:annotation-driven>-->
     <!--配置事务通知-->
   <tx:advice id="txAdvice" transaction-manager="dataSourceTransactionManager">
-
   </tx:advice>
 </beans>

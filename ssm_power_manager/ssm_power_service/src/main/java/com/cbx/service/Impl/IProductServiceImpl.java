@@ -24,4 +24,17 @@ public class IProductServiceImpl implements IProductService {
     public void save(Product product) {
                 iProductDao.save(product);
     }
+
+    @Override
+    public Product findById(Integer productId) {
+        return iProductDao.findById(productId);
+    }
+
+    public void saveProduct(Integer productId) {
+        iProductDao.saveProductId(productId);
+    }
+
+
+
+
 }

@@ -16,5 +16,6 @@ public interface IProductDao {
     public List<Product> findAll();
   @Insert("insert into product (productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus) values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     public void save(Product product);
-
+@Update("update product set productNum=#{productNum},productName=#{productName},cityName=#{cityName},departureTime=#{departureTime},productPrice=#{productPrice},productDesc=#{productDesc},productStatus=#{productStatus} where id=#{productId} ")
+    Product saveProductId(Integer productId);
 }

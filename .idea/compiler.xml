@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ssm_power" />
+        <module name="ssm_power_common" />
+        <module name="ssm_power_dao" />
+        <module name="ssm_power_domain" />
+        <module name="ssm_power_service" />
+        <module name="ssm_web_power" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ssm_power" target="1.5" />
+      <module name="ssm_power_common" target="1.8" />
+      <module name="ssm_power_dao" target="1.8" />
+      <module name="ssm_power_domain" target="1.8" />
+      <module name="ssm_power_manager" target="1.8" />
+      <module name="ssm_power_parent" target="1.8" />
+      <module name="ssm_power_service" target="1.8" />
+      <module name="ssm_power_web" target="1.8" />
+      <module name="ssm_web_power" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
